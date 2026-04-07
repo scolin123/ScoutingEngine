@@ -10,7 +10,8 @@ def train_whiff_model():
     #load and clean data
     df = clean_data(load_data())
 
-    #convert categorial pitch type to numberic
+    #Convert categorial pitch type to numberic
+    #Example: Fastball -> 1, all other pitches 0
     df_encoded = pd.get_dummies(df, columns=['pitch_type'],prefix='type')
 
     features = ['x','y'] + [col for col in df_encoded.columns if col.startswith('type')]

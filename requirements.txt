@@ -6,3 +6,4 @@ streamlit
 matplotlib
 requests
 python-dotenv
+shap

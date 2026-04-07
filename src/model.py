@@ -37,7 +37,7 @@ def train_whiff_model():
     loss=log_loss(y_test,y_probs)
     auc = roc_auc_score(y_test,y_probs)
 
-    print(f"--- Model Evaluation ---")
+    print("--- Model Evaluation ---")
     print(f"Log-Loss: {loss:.4f}")
     print(f"AUC-ROC:  {auc:.4f}")
 

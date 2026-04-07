@@ -6,8 +6,8 @@ from src.preprocess import clean_data
 
 load_dotenv()
 
-SHEET_ID = os.getenv("GOOGLE_SHEETS_ID")
-API_KEY = os.getenv("GOOGLE_SHEETS_API")
+SHEET_ID = os.getenv("GOOGLE_SHEETS_ID", "")
+API_KEY = os.getenv("GOOGLE_SHEETS_API", "")
 
 def load_data(sheet_name="Sheet1"):
     url = f"https://sheets.googleapis.com/v4/spreadsheets/{SHEET_ID}/values/{sheet_name}?key={API_KEY}"

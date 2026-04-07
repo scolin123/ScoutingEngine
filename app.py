@@ -28,7 +28,7 @@ grid_df = pd.DataFrame({'x':xx.ravel(),'y':yy.ravel()})
 
 for col in model.feature_names_in_:
     if col.startswith('type'):
-        grid_df[col] = 1 if col == f'type_{ pitch_type}' else 0
+        grid_df[col] = 1 if col == f'type_{pitch_type}' else 0
 
 #predict probabilities
 probs = model.predict_proba(grid_df[model.feature_names_in_])[:,1].reshape(xx.shape)

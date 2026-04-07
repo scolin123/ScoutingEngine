@@ -30,7 +30,7 @@ Allowed values: 1+
 
 ### pitch_number
 Pitch number within the at-bat
-Always starts with 1
+Ainlways starts with 1
 
 ### pitch_type
 Only use these exact abbreviations. No variations allowed.

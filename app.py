@@ -6,6 +6,7 @@ from src.data_loader import load_data
 from src.preprocess import clean_data
 import matplotlib.patches as patches
 import matplotlib.pyplot as plt
+from src.clustering import analyze_tunneling
 
 st.title("Guelph Royals Scouting Dashboard")
 
@@ -60,3 +61,18 @@ ax.set_xlabel("Horizontal Location(ft)")
 ax.set_ylabel("Vertical Height(ft)")
 
 st.pyplot(fig)
+
+st.divider()
+st.subheader("Pitch Tunneling & Deception")
+
+
+tunneling_df = analyze_tunneling()
+
+try:
+    pitcher_tunnels = tunneling_df.xs(pitcher,level='pitcher_name')
+    st.write(f"Deception Breakdown for {pitcher}:")
+    st.dataframe(pitcher_tunnels)
+    st.caption("Score: Number of  unqiue pitchs thrown into the same spatial tunnel")
+
+except KeyError:
+    st.write("No tunneling data availible for this pitcher")

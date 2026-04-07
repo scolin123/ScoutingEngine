@@ -16,5 +16,7 @@ def analyze_tunneling():
     print("---Tunneling Analysis (Deception Score)---")
     print(tunneling_stats)
 
+    return tunneling_stats
+
 if __name__ == "__main__":
     analyze_tunneling()

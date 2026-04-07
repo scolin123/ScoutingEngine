@@ -26,6 +26,9 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df["inning"] = pd.to_numeric(df["inning"], errors="coerce")
     df["pitch_number"] = pd.to_numeric(df["pitch_number"], errors="coerce")
 
+    #binary whiff or not whiff
+    df["is_whiff"] = (df["result"] == "whiff").astype(int)
+
     df = df.dropna(subset=["pitch_type","x","y","result"])
 
     #Normalize text columns

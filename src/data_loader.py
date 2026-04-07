@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import requests
 from dotenv import load_dotenv
+from src.preprocess import clean_data
 
 load_dotenv()
 
@@ -25,5 +26,10 @@ def load_data(sheet_name="Sheet1"):
 
 
 if __name__ == "__main__":
-    df = load_data()
-    print(df.head())
+    df_raw = load_data() 
+    
+    df_cleaned = clean_data(df_raw) 
+    
+    print(df_cleaned.info())
+    print(df_cleaned.head())
+    

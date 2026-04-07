@@ -156,7 +156,7 @@ Scouting-Engine/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/[Your-Username]/Scouting-Engine.git
+git clone https://github.com/scolin123/Scouting-Engine.git
 cd Scouting-Engine
 ```
 
@@ -203,5 +203,5 @@ Special thanks to the coaching staff and Baseball Operations department for thei
 
 ## Author
 
-**[Your Name]**
+**Colin Shier**
 Baseball Analytics Developer
